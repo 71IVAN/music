@@ -3,5 +3,12 @@
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
-    padding: 20%;
+    padding: 40%;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container_dos{
+    
 }

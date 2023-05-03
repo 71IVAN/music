@@ -1,15 +1,17 @@
-//import 'History.css'
+import './History.css'
+import 'animate.css'
 export function History(){
     return(
         <>
-        <div className="container">
-            <div className="row">
-                <div className="col-12 col-md-6">
-                    <h2>PostMalone</h2>
+        <div className="container animate__animated animate__bounce">
+            
+            <div className="row my-2 foto">
+                <div className="col-12 col-md-12">
+                    <h2 className="text-center">PostMalone</h2>
                     <p>Post Malone es uno de los raperos más sugerentes y genuinos del momento. Aunque su sonido bebe del trap y del hip-hop sureño, en sus canciones siempre sobresalen una emoción, un trasfondo soul y una mirada pop absolutamente deslumbrantes. El cantante y productor neoyorquino es una fábrica imparable de hits, como «Congratulations» o «rockstar», pero además es el creador de una fórmula musical novedosa e impactante que ha estallado en discos como Stoney (2016). Dale al play y entenderás por qué todo el mundo habla de Post Malone.</p>
-                    <img src="https://firebasestorage.googleapis.com/v0/b/music-2b7e1.appspot.com/o/foto1.jpg?alt=media&token=de052e3b-7320-45c1-b8b9-b2ccec2e697e" alt="foto1" className='img-fluid w-100'  />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/music-2b7e1.appspot.com/o/post1.jpg?alt=media&token=fbd0a8fe-7aa5-43a5-829c-be5f74d905d3" alt="foto1" className='img-fluid w-100 imagen' />
                 </div>
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-6 my-5">
                     <h3>Primeros años de vida</h3>
                     <p>Post Malone (4 de julio de 1995) cantante, productor y compositor. Nació en Siracusa, Nueva York, Estados Unidos. Su nombre de nacimiento es Austin Richard Post. Desde muy niño su familia se mudó a Grapevine, Texas. En sus tiempos libres jugaba baloncesto. Su padre era vendedor de comidas del equipo Cowboys de Dallas, esto permitió que Malone ingresara a todos los partidos de manera gratuita y estuviera cerca de los jugadores. A los 12 años su madre le regaló una guitarra. Recibió influencia de Metallica y Megadeth, Malone hizo un tránsito entre el hardcore, el rock clásico y el Hip hop y Trap.
 
@@ -26,7 +28,7 @@ export function History(){
                     </p>
                 </div>
 
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-6 my-5">
                     <h3>Hip-Hop</h3>
                     <p>
                     Se le ha llamado el Donald Trump de hip-hop por sus letras misóginas y por su apoyo a la segunda enmienda norteamericana al Derecho a poseer armas, asuntos que deberían haber acabado con su carrera musical, aunque lo hicieron más popular. Al rapero estadounidense también se le acusa de ser un niño rico cuyos padres le pagaron su carrera musical.
@@ -35,6 +37,7 @@ export function History(){
 
 
                     Se le considera un híbrido de rapero con tendencia al pop y cadencia de música country. Sus letras simbolizan lo oscuro y desesperado que vive el hip-hop contemporáneo.
+                    <img src="https://firebasestorage.googleapis.com/v0/b/music-2b7e1.appspot.com/o/post2.jpg?alt=media&token=abdbc5c7-0478-4e93-a0ed-b2d2d9637e03" alt="post2" className='img-fluid' />
                     </p>
                 </div>
 

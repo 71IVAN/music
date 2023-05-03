@@ -1,12 +1,12 @@
+import { Link } from "react-router-dom"
+import 'animate.css'
 import './Menu.css'
 export function Menu() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg menu navbar-dark">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary animate__animated animate__bounce ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <Link className="navbar-brand" to="/">Post Maolne</Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,22 +21,16 @@ export function Menu() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
+                <Link className="nav-link active " aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
-                </a>
+                <Link className="nav-link" to="/colaboraciones">Colaboraciones</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <Link className="nav-link my-2" to="/tienda">Tienda </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+                <Link className="nav-link" to="/fans">Fans</Link>
               </li>
             </ul>
           </div>
