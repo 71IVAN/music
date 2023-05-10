@@ -5,6 +5,7 @@ import { Fans } from "../Fans/Fans"
 import {Shop} from "../Shop/Shop"
 import { Menu } from "../shared/Menu/Menu"
 import { Footer } from "../shared/Footer/Footer"
+import { Carga } from "../Hook/Carga"
 
 
 export function Rutas(){
@@ -18,6 +19,7 @@ export function Rutas(){
     <Route path="/colaboraciones" element={<Colaboraciones />} />
     <Route path="/fans" element={<Fans />} />
     <Route path="/tienda" element={<Shop />} />
+    <Route path="/Hook" element={<Carga/>} />
     
     </Routes>
     <Footer/>

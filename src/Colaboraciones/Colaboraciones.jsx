@@ -1,4 +1,4 @@
-
+import "./Colaboraciones.css"
 export function Colaboraciones(){
 
   let duos=[{
@@ -30,7 +30,16 @@ export function Colaboraciones(){
           id:4
         }
 
-]  
+]
+
+function hacerEvento(evento){
+(evento.target.classList.add("blanconegro"))
+}
+
+function hacerotroEvento(evento){
+ (evento.target.classList.remove("blanconegro"))
+} 
+
   
   return(
         <>
@@ -45,7 +54,7 @@ export function Colaboraciones(){
                        <h3 className="text-center fw-bold">{duo.nombre}</h3>
                        <h4 className="mt-3 text-center">{duo.nacimiento}</h4>
                        <h4 className="mt-1 text-center">{duo.skil}</h4>
-                       <img src={duo.foto} alt="foto1" className="img_style" />
+                       <img src={duo.foto} alt="foto1" className="img_style" onMouseOver={hacerEvento} onMouseLeave={hacerotroEvento}  />
                        
                     </div>
 
@@ -59,3 +68,5 @@ export function Colaboraciones(){
         </>
     )
 }
+
+
