@@ -28,7 +28,18 @@ export function Music(){
             {
                 canciones.map(function(cancion){
                     return(
-                        <audio controls src={cancion.preview_url}></audio>
+                                            <div key={cancion.id}>
+                    <div className="card h-400 w-75 shadow mx-auto g-1 ">
+                        <div className="row row-cols1- row-cols-md-2 g-1">
+                        <h4 className="mt-3 text-center">{cancion.name}</h4>
+                        <h4 className="mt-3 text-center">{cancion.type}</h4>
+                        <h4 className="mt-3 text-center">{cancion.uri}</h4>
+                        </div>
+                        <div className="text-center">
+                        <audio className="mt-4" controls src={cancion.preview_url}></audio>
+                        </div>
+                    </div>
+                    </div>
                     )
                 })
             }
