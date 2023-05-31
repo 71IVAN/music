@@ -6,7 +6,7 @@ export function Menu() {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary animate__animated animate__bounce ">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Post Maolne</Link>
+          <Link className="navbar-brand" to="/">Wiz Khalifa</Link>
           <button
             className="navbar-toggler"
             type="button"

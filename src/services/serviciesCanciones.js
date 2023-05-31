@@ -5,7 +5,7 @@ export async function consultarCanciones(){
   //URL + EP del servicio 
   const IDARTISTA= "137W8MRPWKqSmrBGDBFSop"
   const URI = ` https://api.spotify.com/v1/artists/${IDARTISTA}/top-tracks?market=us` 
-  const TOKEN = "Bearer BQAG5uMdJirDYCZSZ49BGCr6TvXR0uZnQeisDkjUFPtsngod79Cx_J5pyX_tNGuYyNBLKoatPjykrw7UJzAJTdBV9lgDTa5XMjAb3FyAcvTC6drGEJo"
+  const TOKEN = "Bearer BQBN51ZiXFZJnNvsr89Lrnm5OcYbIZYM-Y1Aw81jR5PB_032s37OoX0XIiWk6kdrkCRhG62XQLnDjNvtbOSRqoQCFIhy4lgJYMwWUEw05Py9_-1MYBU"
   
   //2. Que se hara
   //Configurando la peticion 
