@@ -9,6 +9,7 @@ export function Home(){
            <section className="banner"></section>
            <section className="my-5"><History/></section>
            
+           
         </>
     )
 }

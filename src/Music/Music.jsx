@@ -1,64 +1,69 @@
-import { History } from "../History/History";
-import "./Music.css";
+
 import { consultarCanciones } from "../services/serviciesCanciones";
 import { useState, useEffect } from "react";
+import { ObtenerToken } from "../services/serviciesCanciones";
 
 export function Music() {
-  const [canciones, setCanciones] = useState(null);
-  const [estacargando, setEstacargando] = useState(true);
+
+ 
+  const [canciones, setCanciones] = useState(null)
+  const [estacargando, setEstacargando] = useState(true)
+  const [token, setToken] = useState(null)
+
+
 
   useEffect(function () {
-    consultarCanciones().then(function (respuesta) {
-      setCanciones(respuesta.tracks);
-      setEstacargando(false);
-    });
-  }, []);
+    ObtenerToken().then(respuesta => {
+      setToken(respuesta.access_token)
+    })
+  }, [])
 
-  const traerImagen = (track) => {
-    let imgs = track?.album?.images;
-    return (
-      imgs?.length !== 0 && (
-        <img
-          key={imgs[1]?.url}
-          src={imgs[1]?.url}
-          width={imgs[1]?.width}
-          height={imgs[1]?.height}
-        />
-      )
-    );
-  };
+
+  useEffect(function () {
+    if (token) {
+      consultarCanciones(token).then(function (respuesta) {
+        console.log(respuesta);
+        setCanciones(respuesta.tracks);
+        setEstacargando(false)
+      })
+    }
+
+  }, [token]);
 
   if (estacargando) {
     return (
       <>
-        <h1>Estoy cargando</h1>
+        <h1>ESTA CARGANDO EL CONTENIDO</h1>
       </>
-    );
+    )
+
   } else {
     return (
       <>
-        <section className="mi_componente my-5">
-          <History />
-        </section>
+        <div className="fondo">
+          <div className="container my-5">
+            <div className="row row-cols-1 row-cols-md-2 g-3">
+              {
+                canciones.map(function (cancion) {
+                  return (
 
-        <div className="row mt-2">
-          {canciones.map(function (cancion) {
-            return (
-              <div key={cancion.id} className="col-6">
-                <div className="card h-500 w-75 shadow mx-auto g-0 mt-5">
-                  <div className="row g-1">
-                    <h6 className="mt-5 text-center">Nombre: {cancion.name}</h6>
-                    {traerImagen(cancion)}
-                    <audio className="mt-4" controls src={cancion.preview_url}></audio>
-                    <h4 className="mt-3 text-center">Tipo: {cancion.type}</h4>
-                    <h5 className="mt-3 text-center">Popularidad: {cancion.popularity}</h5>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                    <div className="col">
+                      <div className="card bg-dark border-info h-100 shadow p-4">
+                        <h2 className="text-center text-white ">{cancion.name}</h2>
+                        <img src={cancion.album.images[1].url} alt="" />
+                        <audio className="w-100 my-2" controls src={cancion.preview_url}></audio>
+                        <h3 className=" text-center text-white">Popularidad:<br></br>{cancion.popularity}</h3>
+                      </div>
+
+
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
         </div>
       </>
-    );
+    )
   }
 }
